@@ -563,7 +563,8 @@ h6 {
 
 h1 {
   font-size: 3rem;
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: uppercase; }
 
 h2 {
   font-size: 2.5rem;
@@ -572,6 +573,10 @@ h2 {
 h3 {
   font-size: 1.22rem;
   font-weight: 700; }
+
+h5 {
+  font-size: 1.28em;
+  font-weight: 400; }
 
 h6 {
   font-size: 1.15em;
@@ -751,5 +756,38 @@ header {
 .how-it-works {
   background-color: #2d2457;
   height: 800px; }
+  .how-it-works h1 {
+    color: white;
+    text-align: center;
+    padding: 50px 0 20px 0; }
+
+.register {
+  background-color: #f1f0f9;
+  padding: 180px 0;
+  border-bottom: 2px solid #ccc8ea; }
+  .register .container {
+    text-align: center; }
+  .register h1 {
+    letter-spacing: -2px;
+    margin-bottom: 8px; }
+  .register input[type="button"] {
+    height: 45px;
+    background: #7368c5;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    line-height: 46px;
+    border-radius: 50px;
+    padding: 0 34px;
+    transition-duration: 150ms; }
+    .register input[type="button"]:hover {
+      background-color: #6353da; }
+  .register h5 {
+    font-family: "source sans pro", sans-serif;
+    margin-bottom: 36px; }
+  .register img {
+    float: right;
+    max-width: 780px;
+    margin-top: -70px; }
 
 /*# sourceMappingURL=styles.css.map */
