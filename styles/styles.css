@@ -755,7 +755,7 @@ header {
 
 .how-it-works {
   background-color: #2d2457;
-  height: 800px; }
+  height: 900px; }
   .how-it-works h1 {
     color: white;
     text-align: center;
@@ -771,6 +771,8 @@ header {
     letter-spacing: -2px;
     margin-bottom: 8px; }
   .register input[type="button"] {
+    position: relative;
+    z-index: 2;
     height: 45px;
     background: #7368c5;
     color: white;
@@ -786,8 +788,58 @@ header {
     font-family: "source sans pro", sans-serif;
     margin-bottom: 36px; }
   .register img {
-    float: right;
+    position: absolute;
+    right: 0;
     max-width: 780px;
     margin-top: -70px; }
+
+footer {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 32px;
+  height: 150px;
+  display: flex;
+  align-items: center; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: block; }
+  footer .footer-left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 50%;
+    opacity: 0.7; }
+    footer .footer-left img {
+      float: left;
+      height: 42px;
+      width: 42px; }
+    footer .footer-left ul {
+      float: left; }
+    footer .footer-left a {
+      margin-left: 20px;
+      color: #7368c5;
+      text-transform: uppercase;
+      font-size: 0.76923em;
+      font-weight: 700;
+      transition: opacity 150ms; }
+      footer .footer-left a:hover {
+        opacity: 0.7; }
+  footer .footer-social {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 50%; }
+    footer .footer-social a {
+      margin: 7px 0 0 16px;
+      transition: opacity 150ms; }
+      footer .footer-social a:hover {
+        opacity: 0.7; }
+    footer .footer-social img {
+      height: 70px;
+      width: 70px; }
 
 /*# sourceMappingURL=styles.css.map */
