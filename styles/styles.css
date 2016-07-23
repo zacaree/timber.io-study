@@ -666,9 +666,10 @@ header {
     margin-bottom: 40px;
     line-height: 1.7rem;
     width: 360px; }
-  .hero-left .hero-form {
-    width: 386px; }
-  .hero-left input[type="email"] {
+
+.hero-form {
+  width: 386px; }
+  .hero-form input[type="email"] {
     float: left;
     width: 228px;
     height: 45px;
@@ -678,9 +679,9 @@ header {
     text-align: center;
     color: #7368c5;
     letter-spacing: 1px; }
-    .hero-left input[type="email"]:focus {
+    .hero-form input[type="email"]:focus {
       box-shadow: 0 0 5px 5px #5f54af; }
-  .hero-left input[type="submit"] {
+  .hero-form input[type="submit"] {
     width: 138px;
     height: 45px;
     padding: 0.7rem 2rem;
@@ -690,9 +691,9 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.6px;
     transition: 150ms; }
-    .hero-left input[type="submit"]:hover {
+    .hero-form input[type="submit"]:hover {
       background: #6353da; }
-    .hero-left input[type="submit"]:focus {
+    .hero-form input[type="submit"]:focus {
       outline-style: none; }
 
 .hero-right {
@@ -745,8 +746,13 @@ header {
     width: 134%;
     bottom: 20px; } }
 @media (max-width: 450px) {
-  .hero-left input[type="email"] {
-    width: 100%; } }
+  .hero-form {
+    width: 90%;
+    margin: 0 auto; }
+    .hero-form input[type="email"] {
+      width: 100%;
+      margin-bottom: 16px;
+      margin-right: 0; } }
 .platforms {
   max-width: 1300px;
   margin-left: auto;
@@ -763,6 +769,10 @@ header {
   .platforms li {
     padding: 14px 0; }
 
+@media (max-width: 680px) {
+  .platforms i {
+    font-size: 34px;
+    line-height: 76px; } }
 .features {
   background-color: #f1f0f9;
   margin-bottom: -7px; }
