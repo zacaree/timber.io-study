@@ -819,7 +819,12 @@ header {
   .how-it-works h1 {
     color: white;
     text-align: center;
-    padding: 50px 0 20px 0; }
+    padding: 50px 0 20px 0;
+    letter-spacing: -1px; }
+
+.animation {
+  width: 1000px;
+  margin: 0 auto; }
 
 .register {
   background-color: #f1f0f9;
