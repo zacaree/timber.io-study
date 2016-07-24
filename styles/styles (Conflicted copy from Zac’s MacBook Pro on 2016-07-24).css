@@ -585,7 +585,7 @@ h6 {
 p {
   margin: 0 0 0.75em;
   -webkit-font-smoothing: antialiased;
-  font-size: 0.95em;
+  font-size: 0.93em;
   font-weight: 400; }
 
 a {
@@ -806,7 +806,7 @@ header {
       letter-spacing: -1px;
       margin: 20px 0 8px; }
     .features .feature p {
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: "Source Sans Pro", serif;
       font-weight: 400;
       padding: 0 10px; }
 
@@ -816,50 +816,25 @@ header {
 
 .how-it-works {
   background-color: #2d2457;
-  height: 1030px; }
+  height: 900px; }
   .how-it-works h1, .how-it-works h3 {
     color: white;
     letter-spacing: -1px; }
   .how-it-works h1 {
     text-align: center;
-    padding: 50px 0 20px 0;
-    margin-bottom: 80px; }
-
-.animation-wrap {
-  width: 1000px;
-  margin: 0 auto; }
-  .animation-wrap .callout {
-    position: relative;
-    z-index: 2; }
-  .animation-wrap .one {
-    bottom: 160px;
-    left: 50px; }
-  .animation-wrap .two {
-    bottom: 790px;
-    left: 640px; }
-  .animation-wrap .three {
-    bottom: 320px;
-    left: 640px; }
-  .animation-wrap .number {
-    background-color: #3c3074;
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    position: relative;
-    top: 26px;
-    right: 48px;
-    text-align: center;
-    padding-top: 4px; }
-  .animation-wrap h3 {
-    text-transform: uppercase;
-    margin-bottom: 10px; }
-  .animation-wrap p {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #b3b3b3;
+    padding: 50px 0 20px 0; }
+  .how-it-works h3 {
+    text-transform: uppercase; }
+  .how-it-works .number {
+    background-color: #40337b;
+    height: 10px;
+    width: 10px; }
+  .how-it-works p {
+    color: #a6a6a6;
     width: 325px; }
 
 .animation {
-  width: 100%;
+  width: 1000px;
   margin: 0 auto; }
 
 .register {
