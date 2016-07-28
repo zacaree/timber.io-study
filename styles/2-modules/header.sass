@@ -14,7 +14,7 @@ header
    .logo
       width: 100px
 
-   ul
+   .nav-menu
       flex: 1
       display: flex
       justify-content: flex-end
@@ -138,16 +138,31 @@ header
 @media (max-width: 768px)
    .nav-container
 
-      ul
-         display: none
-
-      .nav-right
+      .nav-icon-container
          flex: 1
          display: flex
          justify-content: flex-end
 
       #nav-icon
          display: block
+
+      .nav-menu
+         display: block
+         position: absolute
+         top: 84px
+         left: 0
+         width: 100%
+         flex: none
+
+      a
+         display: none
+         padding: 12px 12px
+         margin: 0 30px
+         background-color: rgba($timber-bg-color, 0.9)
+         border-top: 1px solid rgba(255,255,255,0.2)
+
+      .active
+         display: list-item
 
 @media (max-width: 680px)
    .hero-right
