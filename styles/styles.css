@@ -744,12 +744,11 @@ header {
     width: 100%;
     flex: none; }
   .nav-container a {
-    display: none;
     padding: 12px 12px;
     margin: 0 30px;
     background-color: rgba(27, 25, 66, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.2); }
-  .nav-container .active {
+  .nav-container .menu-item {
     display: list-item; } }
 @media (max-width: 680px) {
   .hero-right {
