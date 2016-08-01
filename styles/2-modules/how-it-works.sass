@@ -1,6 +1,9 @@
 .how-it-works
    background-color: $timber-bg-color2
-   height: 1030px
+   padding:
+      left: 10px
+      right: 10px
+      bottom: 90px
 
    h1, h3
       color: white
@@ -9,28 +12,29 @@
    h1
       text-align: center
       padding: 50px 0 20px 0
-      margin-bottom: 80px
 
 .animation-wrap
-   width: 1000px
-   margin: 0 auto
+   position: relative
+   max-width: 1000px
+   margin: 80px auto
 
    .callout
-      position: relative
+      position: absolute
       z-index: 2
-      width: 325px
+      padding-left: 50px
+      width: 356px
 
    .one
-      bottom: 160px
-      left: 50px
+      bottom: 20px
+      left: 20px
 
    .two
-      bottom: 790px
-      left: 640px
+      top: -40px
+      right: 20px
 
    .three
-      bottom: 320px
-      left: 640px
+      bottom: -70px
+      right: 20px
 
 
    .number
@@ -39,7 +43,7 @@
       border-radius: 20px
       position: relative
       top: 26px
-      right: 48px
+      left: -45px
       text-align: center
       padding-top: 4px
 
@@ -50,9 +54,63 @@
    p
       font-family: 'Source Sans Pro', sans-serif
       color: darken(white, 30%)
-      width: 325px
-
 
 .animation
    width: 100%
    margin: 0 auto
+
+///////////////////
+// Media Queries //
+///////////////////
+
+@media (max-width: 890px)
+   .how-it-works
+      padding-bottom: 50px
+
+   .animation-wrap
+      +clearfix
+      margin:
+         top: -20px
+         bottom: 0
+
+
+      .callout
+         position: static
+         margin-top: -30px
+         width: 33%
+         padding-right: 20px
+
+      .one
+         float: left
+
+      .two
+         float: left
+
+      .three
+         float: left
+
+@media (max-width: 680px)
+   .how-it-works
+      padding-bottom: 60px
+
+      h1
+         font-size: 2.2rem
+
+   .animation-wrap
+
+      .callout
+         margin:
+            top: -20px
+            left: auto
+            right: auto
+            bottom: 26px
+         width: 85%
+
+      .one
+         float: none
+
+      .two
+         float: none
+
+      .three
+         float: none

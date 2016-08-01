@@ -642,7 +642,7 @@ header {
   max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 0 70px 32px;
+  padding: 50px 0 80px 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -670,12 +670,17 @@ header {
 
 .hero-form {
   width: 386px; }
+  .hero-form::after {
+    clear: both;
+    content: "";
+    display: block; }
   .hero-form input[type="email"] {
     float: left;
     width: 228px;
     height: 45px;
     padding: 10px;
     margin-right: 20px;
+    margin-bottom: 0;
     border-radius: 50px;
     text-align: center;
     color: #7368c5;
@@ -828,31 +833,34 @@ header {
 
 .how-it-works {
   background-color: #2d2457;
-  height: 1030px; }
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 90px; }
   .how-it-works h1, .how-it-works h3 {
     color: white;
     letter-spacing: -1px; }
   .how-it-works h1 {
     text-align: center;
-    padding: 50px 0 20px 0;
-    margin-bottom: 80px; }
+    padding: 50px 0 20px 0; }
 
 .animation-wrap {
-  width: 1000px;
-  margin: 0 auto; }
+  position: relative;
+  max-width: 1000px;
+  margin: 80px auto; }
   .animation-wrap .callout {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    width: 325px; }
+    padding-left: 50px;
+    width: 356px; }
   .animation-wrap .one {
-    bottom: 160px;
-    left: 50px; }
+    bottom: 20px;
+    left: 20px; }
   .animation-wrap .two {
-    bottom: 790px;
-    left: 640px; }
+    top: -40px;
+    right: 20px; }
   .animation-wrap .three {
-    bottom: 320px;
-    left: 640px; }
+    bottom: -70px;
+    right: 20px; }
   .animation-wrap .number {
     background-color: #3c3074;
     height: 30px;
@@ -860,7 +868,7 @@ header {
     border-radius: 20px;
     position: relative;
     top: 26px;
-    right: 48px;
+    left: -45px;
     text-align: center;
     padding-top: 4px; }
   .animation-wrap h3 {
@@ -868,13 +876,52 @@ header {
     margin-bottom: 10px; }
   .animation-wrap p {
     font-family: "Source Sans Pro", sans-serif;
-    color: #b3b3b3;
-    width: 325px; }
+    color: #b3b3b3; }
 
 .animation {
   width: 100%;
   margin: 0 auto; }
 
+@media (max-width: 890px) {
+  .how-it-works {
+    padding-bottom: 50px; }
+
+  .animation-wrap {
+    margin-top: -20px;
+    margin-bottom: 0; }
+    .animation-wrap::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .animation-wrap .callout {
+      position: static;
+      margin-top: -30px;
+      width: 33%;
+      padding-right: 20px; }
+    .animation-wrap .one {
+      float: left; }
+    .animation-wrap .two {
+      float: left; }
+    .animation-wrap .three {
+      float: left; } }
+@media (max-width: 680px) {
+  .how-it-works {
+    padding-bottom: 60px; }
+    .how-it-works h1 {
+      font-size: 2.2rem; }
+
+  .animation-wrap .callout {
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+    width: 85%; }
+  .animation-wrap .one {
+    float: none; }
+  .animation-wrap .two {
+    float: none; }
+  .animation-wrap .three {
+    float: none; } }
 .register {
   background-color: #f1f0f9;
   padding: 180px 0;
@@ -926,12 +973,14 @@ footer {
     justify-content: flex-start;
     max-width: 50%;
     opacity: 0.7; }
+    footer .footer-left::after {
+      clear: both;
+      content: "";
+      display: block; }
     footer .footer-left img {
       float: left;
       height: 42px;
       width: 42px; }
-    footer .footer-left ul {
-      float: left; }
     footer .footer-left a {
       margin-left: 20px;
       color: #7368c5;
