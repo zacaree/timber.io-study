@@ -3,45 +3,75 @@ footer
    padding: 0 32px
    height: 150px
    display: flex
+
+.footer-left
+   display: flex
+   flex: 1
    align-items: center
+   justify-content: flex-start
+   opacity: 0.7
+   +clearfix
 
-   .footer-left
-      display: flex
-      flex: 1
-      align-items: center
-      justify-content: flex-start
-      max-width: 50%
-      opacity: 0.7
-      +clearfix
+   img
+      float: left
+      +size(42px)
 
-      img
-         float: left
-         +size(42px)
+   a
+      margin-left: 20px
+      color: $timber-purple
+      text-transform: uppercase
+      font-size: $base-font-size / 1.3
+      font-weight: 700
+      transition: opacity $base-duration
 
-      a
-         margin-left: 20px
-         color: $timber-purple
-         text-transform: uppercase
-         font-size: $base-font-size / 1.3
-         font-weight: 700
-         transition: opacity $base-duration
+      &:hover
+         opacity: 0.7
 
-         &:hover
-            opacity: 0.7
+.footer-social
+   display: flex
+   flex: 1
+   align-items: center
+   justify-content: flex-end
 
-   .footer-social
-      display: flex
-      flex: 1
-      align-items: center
-      justify-content: flex-end
-      max-width: 50%
+   a
+      margin: 7px 0 0 16px
+      transition: opacity $base-duration
 
-      a
-         margin: 7px 0 0 16px
-         transition: opacity $base-duration
+      &:hover
+         opacity: 0.7
 
-         &:hover
-            opacity: 0.7
+   img
+      +size(70px)
 
-      img
-         +size(70px)
+///////////////////
+// Media Queries //
+///////////////////
+
+@media (max-width: 768px)
+   footer
+
+      .footer-left
+         display: block
+         flex: none
+
+         img
+            float: none
+
+         ul
+
+
+         a
+            display: list-item
+            margin-left: 0
+
+      .footer-social
+         position: absolute
+         right: 0
+         display: block
+         flex: none
+
+         a
+            display: list-item
+
+         img
+            +size(50px)
