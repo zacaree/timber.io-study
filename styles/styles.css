@@ -739,26 +739,40 @@ header {
   .nav-container a {
     padding: 12px 12px;
     margin: 0 30px;
-    background-color: rgba(27, 25, 66, 0.9);
+    background-color: rgba(27, 25, 66, 0.95);
     border-top: 1px solid rgba(255, 255, 255, 0.2); }
   .nav-container .menu-item {
     display: none;
     transition: 0.3s ease-in-out; }
 
-  #checker:checked + header .nav-menu a {
-    position: static; }
-  #checker:checked + header .nav-menu .menu-item {
+  #checker:checked + header .menu-item {
     display: list-item;
     opacity: 0;
-    animation-name: arbitraryname;
-    animation-duration: 300ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards; }
+    transform-origin: top center; }
+    #checker:checked + header .menu-item:nth-child(1) {
+      animation-name: arbitraryname;
+      animation-duration: 150ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    #checker:checked + header .menu-item:nth-child(2) {
+      animation-name: arbitraryname;
+      animation-duration: 300ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    #checker:checked + header .menu-item:nth-child(3) {
+      animation-name: arbitraryname;
+      animation-duration: 450ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
+    #checker:checked + header .menu-item:hover {
+      background-color: rgba(115, 104, 197, 0.3); }
   @keyframes arbitraryname {
     0% {
-      opacity: 0; }
+      opacity: 0;
+      transform: rotateX(90deg) translateY(10px); }
     100% {
-      opacity: 1; } } }
+      opacity: 1;
+      transform: rotateX(0deg) translateY(0px); } } }
 @media (max-width: 680px) {
   .hero-right {
     padding-bottom: 70%;
