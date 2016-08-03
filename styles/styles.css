@@ -619,6 +619,9 @@ header {
   .nav-container #nav-icon {
     display: none; }
 
+#checker {
+  display: none; }
+
 .hero-container {
   max-width: 1300px;
   margin-left: auto;
@@ -626,7 +629,8 @@ header {
   padding: 50px 0 80px 32px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow-x: hidden; }
   .hero-container::after {
     clear: both;
     content: "";
@@ -716,6 +720,9 @@ header {
       width: 100%;
       height: 100%; } }
 @media (max-width: 768px) {
+  .nav-container label {
+    margin-bottom: 0;
+    margin-top: 4px; }
   .nav-container .nav-icon-container {
     flex: 1;
     display: flex;
@@ -735,7 +742,23 @@ header {
     background-color: rgba(27, 25, 66, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.2); }
   .nav-container .menu-item {
-    display: list-item; } }
+    display: none;
+    transition: 0.3s ease-in-out; }
+
+  #checker:checked + header .nav-menu a {
+    position: static; }
+  #checker:checked + header .nav-menu .menu-item {
+    display: list-item;
+    opacity: 0;
+    animation-name: arbitraryname;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; }
+  @keyframes arbitraryname {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } } }
 @media (max-width: 680px) {
   .hero-right {
     padding-bottom: 70%;
@@ -1035,24 +1058,26 @@ footer {
     width: 70px; }
 
 @media (max-width: 768px) {
-  footer .footer-left {
-    display: block;
-    flex: none; }
-    footer .footer-left img {
-      float: none; }
-    footer .footer-left a {
-      display: list-item;
-      margin-left: 0; }
-  footer .footer-social {
-    position: absolute;
-    right: 0;
-    display: block;
-    flex: none; }
-    footer .footer-social a {
-      display: list-item; }
-    footer .footer-social img {
-      height: 50px;
-      width: 50px; } }
+  footer {
+    height: 275px;
+    padding: 44px 32px; }
+    footer .footer-left {
+      display: block; }
+      footer .footer-left img {
+        float: none; }
+      footer .footer-left a {
+        display: list-item;
+        margin-left: 0;
+        margin-top: 18px; }
+    footer .footer-social {
+      display: block;
+      flex: none; }
+      footer .footer-social a {
+        display: list-item;
+        margin: 0 0 10px 0; }
+      footer .footer-social img {
+        height: 50px;
+        width: 50px; } }
 #nav-icon {
   width: 24px;
   height: 16px;

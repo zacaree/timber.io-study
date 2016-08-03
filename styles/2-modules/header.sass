@@ -33,12 +33,16 @@ header
    #nav-icon
       display: none
 
+#checker
+   display: none
+
 .hero-container
    +outer-container
    +padding(50px 0 80px 32px)
    display: flex
    flex-wrap: wrap
    justify-content: space-between
+   overflow-x: hidden
 
 .hero-left
    width: 386px
@@ -140,6 +144,11 @@ header
 @media (max-width: 768px)
    .nav-container
 
+      label
+         margin:
+            bottom: 0
+            top: 4px
+
       .nav-icon-container
          flex: 1
          display: flex
@@ -163,9 +172,39 @@ header
          border-top: 1px solid rgba(255,255,255,0.2)
 
       .menu-item
-         display: list-item
+         display: none
+         transition: 0.3s ease-in-out
 
-      .active
+   #checker
+
+      &:checked + header
+
+         .nav-menu
+
+            a
+               position: static
+
+            .menu-item
+
+               display: list-item
+               opacity: 0
+
+               // @for $i 1 through 3
+               animation:
+                  name: arbitraryname
+                  duration: 300ms
+                  timing-function: ease-in-out
+                  fill-mode: forwards
+
+            @keyframes arbitraryname
+               0%
+                  opacity: 0
+               100%
+                  opacity: 1
+
+
+
+
 
 @media (max-width: 680px)
    .hero-right
